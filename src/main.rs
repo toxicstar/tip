@@ -1,5 +1,3 @@
-type OFloat = Option<f64>;
-
 struct TipResult {
     amt: f64,
     tip: f64,
@@ -20,7 +18,7 @@ fn main() {
     }
 }
 
-fn get_tip(amt: OFloat, pct: OFloat) -> Option<TipResult> {
+fn get_tip(amt: Option<f64>, pct: Option<f64>) -> Option<TipResult> {
     if amt.is_none() || pct.is_none() {
         return None;
     }
