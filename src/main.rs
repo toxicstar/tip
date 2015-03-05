@@ -27,7 +27,7 @@ fn get_tip(amt: Option<f64>, pct: Option<f64>) -> Option<TipResult> {
     let pct = pct.unwrap() / 100f64;
 
     Some(TipResult {
-        amt: amt.clone(),
-        tip: &amt * &pct,
+        amt: amt,
+        tip: amt * pct,
     })
 }
