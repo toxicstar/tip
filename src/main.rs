@@ -13,7 +13,7 @@ fn main() {
     };
 
     match tip {
-        Some(tip) => println!("{:.2}", tip.tip),
+        Some(tip) => println!("${:.2} on ${:.2}", tip.tip, tip.amt),
         None => println!("USAGE: {} AMOUNT <decimal> [TIP PERCENT] <integer>", args[0]),
     }
 }
