@@ -7,7 +7,7 @@ fn main() {
     let args: Vec<_> = std::env::args().collect();
 
     let tip = match &args[..] {
-        [_, ref amt] => get_tip(amt.parse().ok(), Some(0.15f64)),
+        [_, ref amt] => get_tip(amt.parse().ok(), Some(15f64)),
         [_, ref amt, ref pct] => get_tip(amt.parse().ok(), pct.parse().ok()),
         _ => None,
     };
